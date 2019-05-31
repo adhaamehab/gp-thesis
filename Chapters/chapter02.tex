@@ -1,8 +1,43 @@
-Why we have a scientific background?
+Natural language processing relies on almost all computer science fundamental, specially probability and statistics.
 
-\section{Probability}
+This chapter focuses on the required mathematics and computer science which are used in further chapters from the paper.
+
+\section{Bayes Theorem}
+Bayes theorem describes the probability of an event, based on prior knowledge of conditions that might be related to the event.
+$$ P(A \mid B) = \frac{P(B \mid A) \, P(A)}{P(B)} $$
 \section{Text representation}
+
+Words belong to a set of semi-structured data known as language, which contains information about itself.
+One way to view language is as a form of data compression, in which knowledge of the world is consolidated into a symbolic set.
+
+But text in it's raw form doesn't represent any knowledge or feature for any algorithm, thus to be able to apply any advanced algorithms that works on a contextual level of the text we first needs text analysis and information retrieval methods to be able to represent that contextual knowledge.
+
+Therefore, we need to re-format the text into feature vectors to be able to represent the context and knowledge within the text.
+
+\vspace{.5cm}
+
 \subsection{Bag-of-words}
+
+Bag of words (BOW) is an algorithm that counts how many times a word appears in a document. It’s a tally. Those word counts allow us to compare documents and gauge their similarities for applications like search, document classification and topic modeling. BOW is a also method for preparing text for input in a deep-learning neural networks.
+
+\begin{table}[ht]
+\centering
+\caption{Bag of words}
+\begin{tabular}{|l|l|l|l|} 
+\hline
+Word & Doc 1 & Doc 2 & Doc 3  \\ 
+\hline
+Car  & 4     & 2     & 7      \\ 
+\hline
+Boy  & 3     & 1     & 5      \\ 
+\hline
+Park & 3     & 6     & 2      \\
+\hline
+\end{tabular}
+\end{table}
+
+All the vectors get normalized before getting fed to any algorithm. Thus, the frequency of each word is effectively converted to represent the probabilities of those words’ occurrence in the document
+
 \subsection{TF-IDF}
 \subsection{Pre-trained Word embedding}
 
